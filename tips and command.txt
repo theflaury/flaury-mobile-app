@@ -6,6 +6,7 @@ import 'package:get_cli/get_cli.dart';
 flutter pub add get
 import 'package:get/get.dart';
 
+export PATH="$PATH":"$HOME/.pub-cache/bin"
 
 // To create a flutter project in the current directory:
 // Note: By default it will take the folder's name as project name

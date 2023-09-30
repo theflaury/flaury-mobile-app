@@ -9,15 +9,19 @@ class OnboardingView extends GetView<OnboardingController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('OnboardingView'),
-        centerTitle: true,
-      ),
-      body: const Center(
-        child: Text(
-          'OnboardingView is working',
-          style: TextStyle(fontSize: 20),
-        ),
+      body: Column(
+        children: [
+          const Center(
+            child: Text(
+              'OnboardingView is working',
+              style: TextStyle(fontSize: 20),
+            ),
+          ),
+          TextButton(
+            onPressed: () {},
+            child: const Text('Continue'),
+          ),
+        ],
       ),
     );
   }

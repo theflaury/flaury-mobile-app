@@ -1,4 +1,5 @@
 import 'package:flaury/app/theme/colors.dart';
+import 'package:flaury/app/widgets/apptext.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
@@ -12,10 +13,11 @@ class SplashscreenView extends GetView<SplashscreenController> {
     return Scaffold(
       body: Container(
         color: AppColors.primary,
-        child: const Center(
-          child: Text(
+        child: Center(
+          child: BigAppText(
             'FLAURY',
-            style: TextStyle(fontSize: 50, color: AppColors.white ),
+            fontSize: 50,
+            color: AppColors.white,
           ),
         ),
       ),
