@@ -7,19 +7,14 @@ class SplashscreenController extends GetxController {
   final count = 0.obs;
   @override
   void onInit() {
-
-
-
-
     super.onInit();
   }
 
   @override
   Future<void> onReady() async {
-    await Future.delayed(const Duration(seconds: 20));
+    await Future.delayed(const Duration(seconds: 5));
 
-    Get.offAllNamed(Routes.ONBOARDING);
-
+    Get.offAllNamed(Routes.SIGNIN);
 
     super.onReady();
   }
