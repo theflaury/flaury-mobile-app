@@ -2,6 +2,7 @@ import 'package:flaury/app/routes/app_pages.dart';
 import 'package:flaury/app/theme/colors.dart';
 import 'package:flaury/app/widgets/appbutton.dart';
 import 'package:flaury/app/widgets/apptext.dart';
+import 'package:flaury/app/widgets/forgotpassword.dart';
 import 'package:flaury/app/widgets/space.dart';
 import 'package:flaury/app/widgets/textfields.dart';
 import 'package:flutter/material.dart';
@@ -50,6 +51,7 @@ class SigninView extends GetView<SigninController> {
                       ),
                     ),
                     vSpace(40),
+                    // Forgot Password
                     Row(
                       children: [
                         const SizedBox(
@@ -58,37 +60,9 @@ class SigninView extends GetView<SigninController> {
                           // child:
                           // CheckboxListTile(value: true, onChanged: ),
                         ),
-                        hSpace(100),
-                        GestureDetector(
-                          onTap: () {
-                            showModalBottomSheet(
-                              context: context,
-                              builder: (context) => Container(
-                                padding: simPad(31, 0),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    MedAppText('Make Selection'),
-                                    SmallAppText(
-                                      'Select One Of The Options given to you',
-                                    ),
-                                    Container(
-                                      padding: const EdgeInsets.all(30.0),
-                                      decoration: BoxDecoration(
-                                          borderRadius:
-                                              BorderRadius.circular(10.0)),
-                                    )
-                                  ],
-                                ),
-                              ),
-                            );
-                          },
-                          child: SmallAppText(
-                            'Forgot Password?',
-                            fontWeight: FontWeight.bold,
-                            color: AppColors.primary,
-                          ),
-                        )
+                        hSpace(10),
+                        // Bottom SHEET
+                        // forgotpassword()
                       ],
                     )
                   ],
@@ -103,7 +77,7 @@ class SigninView extends GetView<SigninController> {
                       title: 'Log In',
                     ),
                   ),
-                  vSpace(250.h),
+                  vSpace(50),
                   Container(
                     padding: simPad(0, 20.h),
                     child: Row(
