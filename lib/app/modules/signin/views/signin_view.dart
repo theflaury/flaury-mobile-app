@@ -2,7 +2,6 @@ import 'package:flaury/app/routes/app_pages.dart';
 import 'package:flaury/app/theme/colors.dart';
 import 'package:flaury/app/widgets/appbutton.dart';
 import 'package:flaury/app/widgets/apptext.dart';
-import 'package:flaury/app/widgets/forgotpassword.dart';
 import 'package:flaury/app/widgets/space.dart';
 import 'package:flaury/app/widgets/textfields.dart';
 import 'package:flutter/material.dart';
@@ -50,24 +49,25 @@ class SigninView extends GetView<SigninController> {
                         ),
                       ),
                     ),
-                    vSpace(40),
+                    vSpace(20),
                     // Forgot Password
                     Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
                       children: [
-                        const SizedBox(
-                          width: 10,
-                          height: 10,
-                          // child:
-                          // CheckboxListTile(value: true, onChanged: ),
-                        ),
-                        hSpace(10),
-                        // Bottom SHEET
-                        // forgotpassword()
+                        GestureDetector(
+                          onTap: () => Get.toNamed(Routes.FORGOT_PASSWORD),
+                          child: SmallAppText(
+                            'Forgot Password?',
+                            fontWeight: FontWeight.bold,
+                            color: AppColors.primary,
+                          ),
+                        )
                       ],
                     )
                   ],
                 ),
               ),
+              // Log In
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -78,6 +78,7 @@ class SigninView extends GetView<SigninController> {
                     ),
                   ),
                   vSpace(50),
+                  // Sign Up
                   Container(
                     padding: simPad(0, 20.h),
                     child: Row(
