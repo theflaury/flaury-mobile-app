@@ -31,8 +31,8 @@ class FgButton extends StatelessWidget {
             BoxShadow(
               color: AppColors.black,
               offset: Offset(
-                0.0,
-                5.0,
+                0.1,
+                2.0,
               ),
               blurRadius: 5.0,
             ),
@@ -40,6 +40,7 @@ class FgButton extends StatelessWidget {
           borderRadius: BorderRadius.circular(20),
           border: Border.all(
             color: bordercolor ?? AppColors.white,
+            width: 1.5,
           ),
         ),
         child: Row(

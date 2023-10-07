@@ -18,64 +18,70 @@ class ForgotPasswordView extends GetView<ForgotPasswordController> {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: true,
-        leading: Icon(
-          Icons.navigate_before,
-          size: 50.h,
-          color: AppColors.black,
-        ),
+        leading: IconButton(
+            onPressed: () {
+              Get.back();
+            },
+            icon: Icon(
+              Icons.navigate_before,
+              size: 50.h,
+              color: AppColors.black,
+            )),
         title: BigAppText('Forgot Password'),
         centerTitle: false,
         elevation: 0,
         backgroundColor: Colors.transparent,
       ),
-      body: Container(
-        padding: simPad(20, 20),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          //crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Center(
-              child: Image.asset(
-                'assets/images/forgot_pass.png',
-                height: 250.h,
+      body: SafeArea(
+        child: Container(
+          padding: simPad(20, 20),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            //crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Center(
+                child: Image.asset(
+                  'assets/images/forgot_pass.png',
+                  height: 250.h,
+                ),
               ),
-            ),
-            vSpace(30),
-            MedAppText(
-              'Select how you would like to reset your password',
-              fontSize: 20,
-            ),
-            vSpace(50),
-            GestureDetector(
-              onTap: () {
-                // Handle tap gesture here (e.g., navigate to another page)
-                if (kDebugMode) {
-                  print('SMS container tapped!');
-                }
-              },
-              child: const FgButton(
-                bordercolor: AppColors.white,
-                hint: 'Via SMS',
-                label: '+2348072****',
-                icon: Iconsax.message,
+              vSpace(30),
+              MedAppText(
+                'Select how you would like to reset your password',
+                fontSize: 20,
               ),
-            ),
-            vSpace(30),
-            GestureDetector(
-              onTap: () {
-                // Handle tap gesture here (e.g., navigate to another page)
-                if (kDebugMode) {
-                  print('Email container tapped!');
-                }
-              },
-              child: const FgButton(
-                bordercolor: AppColors.white,
-                hint: 'Via Email',
-                label: 'bec***om@mail.com',
-                icon: Icons.email_rounded,
+              vSpace(50),
+              GestureDetector(
+                onTap: () {
+                  // Handle tap gesture here (e.g., navigate to another page)
+                  if (kDebugMode) {
+                    print('SMS container tapped!');
+                  }
+                },
+                child: const FgButton(
+                  bordercolor: AppColors.primary,
+                  hint: 'via SMS',
+                  label: '+2348072****',
+                  icon: Iconsax.message,
+                ),
               ),
-            )
-          ],
+              vSpace(30),
+              GestureDetector(
+                onTap: () {
+                  // Handle tap gesture here (e.g., navigate to another page)
+                  if (kDebugMode) {
+                    print('Email container tapped!');
+                  }
+                },
+                child: const FgButton(
+                  bordercolor: AppColors.primary,
+                  hint: 'via Email',
+                  label: 'bec***om@mail.com',
+                  icon: Icons.email_rounded,
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );
