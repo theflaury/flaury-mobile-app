@@ -32,6 +32,7 @@ class SignupView extends GetView<SignupController> {
                     const AppTextFormField(
                       label: 'Name',
                       hint: 'Enter Your Name',
+                      keyboardType: TextInputType.text,
                     ),
                     vSpace(20),
                     const AppTextFormField(
@@ -53,6 +54,7 @@ class SignupView extends GetView<SignupController> {
                     const AppTextFormField(
                       label: 'Mobile Number',
                       hint: '08072101662',
+                      keyboardType: TextInputType.number,
                     ),
                     vSpace(50),
                   ],
