@@ -2,6 +2,7 @@ import 'package:flaury/app/routes/app_pages.dart';
 import 'package:flaury/app/theme/colors.dart';
 import 'package:flaury/app/widgets/appbutton.dart';
 import 'package:flaury/app/widgets/apptext.dart';
+import 'package:flaury/app/widgets/checkbokstls.dart';
 import 'package:flaury/app/widgets/space.dart';
 import 'package:flaury/app/widgets/textfields.dart';
 import 'package:flutter/material.dart';
@@ -17,7 +18,6 @@ class SigninView extends GetView<SigninController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomInset: false,
       body: SingleChildScrollView(
         child: SafeArea(
           child: Column(
@@ -32,11 +32,15 @@ class SigninView extends GetView<SigninController> {
                       'Hi, Welcome Back 👋🏼',
                     ),
                     vSpace(10),
-                    SmallAppText('Hello, check out what you missed!'),
+                    SmallAppText(
+                      'Hello, check out what you missed!',
+                      color: AppColors.greytext,
+                    ),
                     vSpace(25),
                     const AppTextFormField(
                       label: 'Email Address',
                       hint: 'Enter Your Email Address',
+                      
                     ),
                     vSpace(20),
                     AppTextFormField(
@@ -49,11 +53,19 @@ class SigninView extends GetView<SigninController> {
                         ),
                       ),
                     ),
-                    vSpace(20),
+                    vSpace(15),
                     // Forgot Password
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
+                        Row(
+                          children: [
+                            const MyCheckbox(),
+                            SmallAppText(
+                              'Remember me',
+                            ),
+                          ],
+                        ),
                         GestureDetector(
                           onTap: () => Get.toNamed(Routes.FORGOT_PASSWORD),
                           child: SmallAppText(
