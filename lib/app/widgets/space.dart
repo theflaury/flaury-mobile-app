@@ -14,5 +14,5 @@ Widget hSpace(double width) {
 }
 
 EdgeInsetsGeometry simPad(double v, double h) {
-  return EdgeInsets.symmetric(vertical: v, horizontal: h);
+  return EdgeInsets.symmetric(vertical: v.h, horizontal: h.h);
 }

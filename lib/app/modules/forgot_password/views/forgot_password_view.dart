@@ -5,10 +5,9 @@ import 'package:flaury/app/widgets/space.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import 'package:get/get.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
-
+import '../../../routes/app_pages.dart';
 import '../controllers/forgot_password_controller.dart';
 
 class ForgotPasswordView extends GetView<ForgotPasswordController> {
@@ -17,16 +16,18 @@ class ForgotPasswordView extends GetView<ForgotPasswordController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        automaticallyImplyLeading: true,
+        automaticallyImplyLeading: false,
         leading: IconButton(
-            onPressed: () {
-              Get.back();
-            },
-            icon: Icon(
-              Icons.navigate_before,
-              size: 50.h,
-              color: AppColors.black,
-            )),
+          onPressed: () {
+            Get.offAll(Routes.SIGNIN);
+          },
+          icon: Icon(
+            Icons.navigate_before,
+            size: 50.h,
+            color: AppColors.black,
+          ),
+        ),
+        toolbarHeight: 70.h,
         title: BigAppText('Forgot Password'),
         centerTitle: false,
         elevation: 0,
@@ -53,6 +54,7 @@ class ForgotPasswordView extends GetView<ForgotPasswordController> {
               vSpace(50),
               GestureDetector(
                 onTap: () {
+                  Get.toNamed(Routes.PHONEAUTH);
                   // Handle tap gesture here (e.g., navigate to another page)
                   if (kDebugMode) {
                     print('SMS container tapped!');
@@ -68,6 +70,7 @@ class ForgotPasswordView extends GetView<ForgotPasswordController> {
               vSpace(30),
               GestureDetector(
                 onTap: () {
+                  Get.toNamed(Routes.EMAILAUTH);
                   // Handle tap gesture here (e.g., navigate to another page)
                   if (kDebugMode) {
                     print('Email container tapped!');

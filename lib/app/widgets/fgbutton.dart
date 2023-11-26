@@ -32,9 +32,9 @@ class FgButton extends StatelessWidget {
               color: AppColors.black,
               offset: Offset(
                 0.1,
-                2.0,
+                1.0,
               ),
-              blurRadius: 5.0,
+              blurRadius: 4.5,
             ),
           ],
           borderRadius: BorderRadius.circular(20),
@@ -73,6 +73,7 @@ class FgButton extends StatelessWidget {
                 BigAppText(
                   label ?? '',
                   fontSize: 20.h,
+                  fontWeight: FontWeight.w500,
                 )
               ],
             )

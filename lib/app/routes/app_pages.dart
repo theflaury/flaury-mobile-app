@@ -1,9 +1,15 @@
 import 'package:get/get.dart';
 
+import '../modules/emailauth/bindings/emailauth_binding.dart';
+import '../modules/emailauth/views/emailauth_view.dart';
 import '../modules/forgot_password/bindings/forgot_password_binding.dart';
 import '../modules/forgot_password/views/forgot_password_view.dart';
+import '../modules/newpass/bindings/newpass_binding.dart';
+import '../modules/newpass/views/newpass_view.dart';
 import '../modules/onboarding/bindings/onboarding_binding.dart';
 import '../modules/onboarding/views/onboarding_view.dart';
+import '../modules/phoneauth/bindings/phoneauth_binding.dart';
+import '../modules/phoneauth/views/phoneauth_view.dart';
 import '../modules/profile/bindings/profile_binding.dart';
 import '../modules/profile/views/profile_view.dart';
 import '../modules/signin/bindings/signin_binding.dart';
@@ -33,7 +39,7 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.ONBOARDING,
-      page: () => const OnboardingView(),
+      page: () => OnboardingView(),
       binding: OnboardingBinding(),
     ),
     GetPage(
@@ -50,6 +56,21 @@ class AppPages {
       name: _Paths.PROFILE,
       page: () => const ProfileView(),
       binding: ProfileBinding(),
+    ),
+    GetPage(
+      name: _Paths.NEWPASS,
+      page: () => const NewpassView(),
+      binding: NewpassBinding(),
+    ),
+    GetPage(
+      name: _Paths.PHONEAUTH,
+      page: () => const PhoneauthView(),
+      binding: PhoneauthBinding(),
+    ),
+    GetPage(
+      name: _Paths.EMAILAUTH,
+      page: () => const EmailauthView(),
+      binding: EmailauthBinding(),
     ),
   ];
 }

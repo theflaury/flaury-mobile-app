@@ -1,44 +1,51 @@
-import 'package:flaury/app/theme/colors.dart';
-import 'package:flaury/app/widgets/apptext.dart';
-import 'package:flaury/app/widgets/space.dart';
+import 'package:flaury/app/routes/app_pages.dart';
+import 'package:flaury/app/widgets/onbardingpage.dart';
 import 'package:flutter/material.dart';
-
 import 'package:get/get.dart';
-
 import '../controllers/onboarding_controller.dart';
 
+// ignore: must_be_immutable
 class OnboardingView extends GetView<OnboardingController> {
-  const OnboardingView({Key? key}) : super(key: key);
+  OnboardingView({Key? key}) : super(key: key);
+  PageController pageController = PageController(
+    initialPage: 0,
+  );
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Expanded(
-              flex: 3,
-              child: Container(
-                decoration: const BoxDecoration(
-                    image: DecorationImage(
-                        image: AssetImage('assets/images/onboarding1.png'),
-                        fit: BoxFit.cover)),
-              ),
-            ),
-            vSpace(50),
-            Expanded(
-              flex: 1,
-              child: Container(
-                padding: simPad(0, 20),
-                child: BigAppText(
-                  'Great Look Isn’t By Accident but by Appointment',
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
-          ],
-        ),
+      body: PageView(
+        controller: pageController,
+        children: [
+          OnboardingPage(
+            image: const AssetImage('assets/images/onboarding1.png'),
+            text1: "Great Look Isn`t By Accident but by Appointment",
+            buttontext: 'Continue',
+            onPressed: () {
+              pageController.animateToPage(1,
+                  duration: const Duration(milliseconds: 150),
+                  curve: Curves.easeIn);
+            },
+          ),
+          OnboardingPage(
+            image: const AssetImage('assets/images/onboarding2.png'),
+            text1: "Hire a Beauty Service Provider in Minutes!",
+            buttontext: 'Continue',
+            onPressed: () {
+              pageController.animateToPage(2,
+                  duration: const Duration(milliseconds: 250),
+                  curve: Curves.easeIn);
+            },
+          ),
+          OnboardingPage(
+            image: const AssetImage('assets/images/onboarding3.png'),
+            text1: "Earn More Income by Providing your services",
+            buttontext: 'Continue', 
+            onPressed: () {
+              Get.toNamed(Routes.SIGNUP);
+            },
+          ),
+        ],
       ),
     );
   }

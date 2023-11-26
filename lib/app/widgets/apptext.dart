@@ -4,8 +4,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../theme/colors.dart';
 
-
-
 class SmallAppText extends StatelessWidget {
   SmallAppText(this.data,
       {super.key, this.color, this.fontSize, this.fontWeight, this.alignment});

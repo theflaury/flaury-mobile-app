@@ -1,9 +1,8 @@
 import 'package:flaury/app/widgets/appbutton.dart';
 import 'package:flaury/app/widgets/space.dart';
 import 'package:flutter/material.dart';
-
 import 'package:get/get.dart';
-
+import '../../../theme/colors.dart';
 import '../controllers/profile_controller.dart';
 
 class ProfileView extends GetView<ProfileController> {
@@ -20,6 +19,7 @@ class ProfileView extends GetView<ProfileController> {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   Container(
+                    color: AppColors.primary,
                     padding: simPad(20, 100),
                     child: AppElevatedButton(title: 'Help', onPressed: () {}),
                   )
