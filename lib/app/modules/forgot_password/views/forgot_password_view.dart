@@ -19,7 +19,7 @@ class ForgotPasswordView extends GetView<ForgotPasswordController> {
         automaticallyImplyLeading: false,
         leading: IconButton(
           onPressed: () {
-            Get.offAll(Routes.SIGNIN);
+            Get.offAllNamed(Routes.SIGNIN);
           },
           icon: Icon(
             Icons.navigate_before,

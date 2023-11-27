@@ -4,6 +4,8 @@ import '../modules/emailauth/bindings/emailauth_binding.dart';
 import '../modules/emailauth/views/emailauth_view.dart';
 import '../modules/forgot_password/bindings/forgot_password_binding.dart';
 import '../modules/forgot_password/views/forgot_password_view.dart';
+import '../modules/home/bindings/home_binding.dart';
+import '../modules/home/views/home_view.dart';
 import '../modules/newpass/bindings/newpass_binding.dart';
 import '../modules/newpass/views/newpass_view.dart';
 import '../modules/onboarding/bindings/onboarding_binding.dart';
@@ -71,6 +73,11 @@ class AppPages {
       name: _Paths.EMAILAUTH,
       page: () => const EmailauthView(),
       binding: EmailauthBinding(),
+    ),
+    GetPage(
+      name: _Paths.HOME,
+      page: () => const HomeView(),
+      binding: HomeBinding(),
     ),
   ];
 }

@@ -12,6 +12,7 @@ class OnboardingPage extends StatelessWidget {
     required this.onPressed,
   });
 
+  
   final AssetImage? image;
   final String? text1;
   final String? buttontext;

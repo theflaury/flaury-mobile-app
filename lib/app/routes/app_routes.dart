@@ -13,6 +13,7 @@ abstract class Routes {
   static const NEWPASS = _Paths.NEWPASS;
   static const PHONEAUTH = _Paths.PHONEAUTH;
   static const EMAILAUTH = _Paths.EMAILAUTH;
+  static const HOME = _Paths.HOME;
 }
 
 abstract class _Paths {
@@ -27,4 +28,5 @@ abstract class _Paths {
   static const NEWPASS = '/newpass';
   static const PHONEAUTH = '/phoneauth';
   static const EMAILAUTH = '/emailauth';
+  static const HOME = '/home';
 }

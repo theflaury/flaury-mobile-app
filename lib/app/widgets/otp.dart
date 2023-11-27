@@ -58,6 +58,9 @@ class Otp extends StatelessWidget {
             FilteringTextInputFormatter.digitsOnly
           ],
           decoration: InputDecoration(
+            focusedBorder: const OutlineInputBorder(
+              borderSide: BorderSide(color: AppColors.black, width: 1.0),
+            ),
             border: OutlineInputBorder(
               borderSide:
                   const BorderSide(color: AppColors.grey), // Grey border

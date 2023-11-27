@@ -5,17 +5,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AppTextFormField extends StatelessWidget {
-  const AppTextFormField({
-    super.key,
-    this.obscureText = false,
-    this.controller,
-    this.hint,
-    this.label,
-    this.prefixIcon,
-    this.suffixIcon,
-    this.keyboardType,
-    this.validator,
-  });
+  const AppTextFormField(
+      {super.key,
+      this.obscureText = false,
+      this.controller,
+      this.hint,
+      this.label,
+      this.prefixIcon,
+      this.suffixIcon,
+      this.keyboardType,
+      this.validator,
+      this.onSaved,
+      this.color});
 
   final bool obscureText;
   final TextEditingController? controller;
@@ -25,6 +26,8 @@ class AppTextFormField extends StatelessWidget {
   final IconButton? suffixIcon;
   final TextInputType? keyboardType;
   final FormFieldValidator<String>? validator;
+  final Function? onSaved;
+  final Color? color;
 
   @override
   Widget build(BuildContext context) {
@@ -45,16 +48,23 @@ class AppTextFormField extends StatelessWidget {
           obscureText: obscureText,
           controller: controller,
           keyboardType: keyboardType,
+          onSaved: onSaved as void Function(String?)?,
 
           decoration: InputDecoration(
+            focusedBorder: const OutlineInputBorder(
+              borderSide: BorderSide(color: AppColors.black, width: 1.0),
+            ),
             border: OutlineInputBorder(
               borderSide:
                   const BorderSide(color: AppColors.grey), // Grey border
+
               borderRadius: BorderRadius.circular(5),
             ),
             prefixIcon: prefixIcon,
             suffixIcon: suffixIcon,
             hintText: hint,
+            fillColor: color ?? AppColors.white,
+            filled: true,
 
             labelStyle: const TextStyle(
                 color: AppColors.black), // Customize label text color
