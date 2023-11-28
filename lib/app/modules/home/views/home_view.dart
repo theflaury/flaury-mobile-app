@@ -1,3 +1,4 @@
+import 'package:flaury/app/constants/images.dart';
 import 'package:flaury/app/theme/colors.dart';
 import 'package:flaury/app/widgets/apptext.dart';
 import 'package:flaury/app/widgets/caregories.dart';
@@ -12,49 +13,67 @@ class HomeView extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
-        child: SafeArea(
-          child: Column(
-            children: [
-              // Header
-              const HomeHeader(),
-              vSpace(30),
-              // Categories
-              Container(
-                padding: simPad(0, 25),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    BigAppText(
-                      'Categories',
-                    ),
-                    vSpace(15),
-                    const Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Categories(
-                          image: AssetImage('assets/images/Rectangle 15.png'),
-                          data: 'Paint',
+      body: SafeArea(
+        child: Column(
+          children: [
+            // Header
+            const HomeHeader(),
+            vSpace(30),
+            // Categories
+            Expanded(
+              child: SingleChildScrollView(
+                physics: const AlwaysScrollableScrollPhysics(
+                  parent: BouncingScrollPhysics(),
+                ),
+                child: SizedBox(
+                  width: double.infinity,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Padding(
+                        padding: simPad(0, 25),
+                        child: BigAppText(
+                          'Categories',
                         ),
-                        Categories(
-                          image: AssetImage('assets/images/Rectangle 15.png'),
-                          data: 'Paint',
+                      ),
+                      vSpace(15),
+                      SingleChildScrollView(
+                        physics: const BouncingScrollPhysics(),
+                        padding: simPad(0, 25),
+                        scrollDirection: Axis.horizontal,
+                        child: const Wrap(
+                          spacing: 10,
+                          children: [
+                            Categories(
+                              image: AppImages.brush,
+                              data: 'Paint',
+                            ),
+                            Categories(
+                              image: AppImages.brush,
+                              data: 'Paint',
+                            ),
+                            Categories(
+                              image: AppImages.brush,
+                              data: 'Paint',
+                            ),
+                            Categories(
+                              image: AppImages.brush,
+                              data: 'Paint',
+                            ),
+                            Categories(
+                              image: AppImages.brush,
+                              data: 'Paint',
+                            ),
+                          ],
                         ),
-                        Categories(
-                          image: AssetImage('assets/images/Rectangle 15.png'),
-                          data: 'Paint',
-                        ),
-                        Categories(
-                          image: AssetImage('assets/images/Rectangle 15.png'),
-                          data: 'Paint',
-                        ),
-                      ],
-                    )
-                  ],
+                      ),
+                      MedAppText('Popular Services', fontSize: 20),
+                    ],
+                  ),
                 ),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );
