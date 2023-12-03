@@ -1,9 +1,11 @@
+import 'package:flaury/app/routes/app_pages.dart';
 import 'package:flaury/app/theme/colors.dart';
 import 'package:flaury/app/widgets/apptext.dart';
 import 'package:flaury/app/widgets/space.dart';
 import 'package:flaury/app/widgets/textfields.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 
 class HomeHeader extends StatelessWidget {
   const HomeHeader({
@@ -48,7 +50,9 @@ class HomeHeader extends StatelessWidget {
               ),
               hSpace(50),
               IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  Get.toNamed(Routes.NOTIFICATIONS);
+                },
                 icon: Icon(
                   Icons.notifications,
                   color: AppColors.white,
@@ -56,7 +60,9 @@ class HomeHeader extends StatelessWidget {
                 ),
               ),
               IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  Get.toNamed(Routes.FAVOURITE);
+                },
                 icon: Icon(
                   Icons.favorite,
                   color: AppColors.white,

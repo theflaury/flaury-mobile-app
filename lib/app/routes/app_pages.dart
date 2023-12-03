@@ -1,12 +1,17 @@
 import 'package:get/get.dart';
+
 import '../modules/emailauth/bindings/emailauth_binding.dart';
 import '../modules/emailauth/views/emailauth_view.dart';
+import '../modules/favourite/bindings/favourite_binding.dart';
+import '../modules/favourite/views/favourite_view.dart';
 import '../modules/forgot_password/bindings/forgot_password_binding.dart';
 import '../modules/forgot_password/views/forgot_password_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/newpass/bindings/newpass_binding.dart';
 import '../modules/newpass/views/newpass_view.dart';
+import '../modules/notifications/bindings/notifications_binding.dart';
+import '../modules/notifications/views/notifications_view.dart';
 import '../modules/onboarding/bindings/onboarding_binding.dart';
 import '../modules/onboarding/views/onboarding_view.dart';
 import '../modules/phoneauth/bindings/phoneauth_binding.dart';
@@ -78,6 +83,15 @@ class AppPages {
       page: () => const HomeView(),
       binding: HomeBinding(),
     ),
-    
+    GetPage(
+      name: _Paths.NOTIFICATIONS,
+      page: () => const NotificationsView(),
+      binding: NotificationsBinding(),
+    ),
+    GetPage(
+      name: _Paths.FAVOURITE,
+      page: () => const FavouriteView(),
+      binding: FavouriteBinding(),
+    ),
   ];
 }
