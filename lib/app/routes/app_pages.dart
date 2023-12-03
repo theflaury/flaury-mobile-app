@@ -1,5 +1,4 @@
 import 'package:get/get.dart';
-
 import '../modules/emailauth/bindings/emailauth_binding.dart';
 import '../modules/emailauth/views/emailauth_view.dart';
 import '../modules/forgot_password/bindings/forgot_password_binding.dart';
@@ -79,5 +78,6 @@ class AppPages {
       page: () => const HomeView(),
       binding: HomeBinding(),
     ),
+    
   ];
 }

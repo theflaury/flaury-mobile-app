@@ -1,10 +1,8 @@
 import 'package:flaury/app/routes/app_pages.dart';
 import 'package:flaury/app/theme/colors.dart';
 import 'package:flaury/app/widgets/apptext.dart';
-import 'package:flaury/app/widgets/fgbutton.dart';
 import 'package:flaury/app/widgets/space.dart';
 import 'package:flaury/app/widgets/textfields.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

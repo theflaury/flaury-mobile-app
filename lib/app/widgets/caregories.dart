@@ -1,4 +1,3 @@
-import 'package:flaury/app/constants/images.dart';
 import 'package:flaury/app/theme/colors.dart';
 import 'package:flaury/app/widgets/apptext.dart';
 import 'package:flaury/app/widgets/space.dart';
@@ -12,10 +11,8 @@ class Categories extends StatelessWidget {
     required this.data,
     required this.image,
   });
-
   final Function()? onTap;
   final String image;
-
   final String data;
 
   @override
@@ -29,7 +26,7 @@ class Categories extends StatelessWidget {
             backgroundColor: AppColors.primarylight,
             child: Image.asset(
               image,
-              width: 30.w,
+              width: 40.w,
             ),
           ),
           vSpace(10),

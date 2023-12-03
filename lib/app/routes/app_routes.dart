@@ -14,6 +14,7 @@ abstract class Routes {
   static const PHONEAUTH = _Paths.PHONEAUTH;
   static const EMAILAUTH = _Paths.EMAILAUTH;
   static const HOME = _Paths.HOME;
+  static const BOTTOMNAVIGATION = _Paths.BOTTOMNAVIGATION;
 }
 
 abstract class _Paths {
@@ -29,4 +30,5 @@ abstract class _Paths {
   static const PHONEAUTH = '/phoneauth';
   static const EMAILAUTH = '/emailauth';
   static const HOME = '/home';
+  static const BOTTOMNAVIGATION = '/bottomnavigation';
 }

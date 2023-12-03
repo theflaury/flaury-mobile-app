@@ -1,4 +1,3 @@
-import 'package:flaury/app/routes/app_pages.dart';
 import 'package:flaury/app/theme/colors.dart';
 import 'package:flaury/app/widgets/apptext.dart';
 import 'package:flaury/app/widgets/otp.dart';
