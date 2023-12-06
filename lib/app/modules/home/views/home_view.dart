@@ -10,9 +10,12 @@ import 'package:flaury/app/widgets/space.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../controllers/home_controller.dart';
+import 'package:flaury/app/widgets/navbar.dart';
 
 class HomeView extends GetView<HomeController> {
-  const HomeView({Key? key}) : super(key: key);
+  HomeView({Key? key}) : super(key: key);
+  final RxInt currentIndex = 0.obs; // Use GetX RxInt for reactivity
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,7 +24,7 @@ class HomeView extends GetView<HomeController> {
           children: [
             // Header
             const HomeHeader(),
-            vSpace(30),
+            vSpace(10),
             // Categories
             Expanded(
               child: SingleChildScrollView(
@@ -133,6 +136,18 @@ class HomeView extends GetView<HomeController> {
                               location: 'Dome Hills, Idan',
                               image: AppImages.nearbysalon,
                             ),
+                            NearbyContainer(
+                              category: 'FOR MEN & WOMEN',
+                              title: 'Timeless Salon',
+                              location: 'Dome Hills, Idan',
+                              image: AppImages.nearbysalon,
+                            ),
+                            NearbyContainer(
+                              category: 'FOR MEN & WOMEN',
+                              title: 'Timeless Salon',
+                              location: 'Dome Hills, Idan',
+                              image: AppImages.nearbysalon,
+                            ),
                           ],
                         ),
                       ),
@@ -145,7 +160,7 @@ class HomeView extends GetView<HomeController> {
                             vSpace(10),
                             const SingleChildScrollView(
                               physics: ClampingScrollPhysics(),
-                              scrollDirection: Axis.horizontal,
+                              scrollDirection: Axis.vertical,
                               child: Wrap(
                                 spacing: 20,
                                 children: [
@@ -173,12 +188,6 @@ class HomeView extends GetView<HomeController> {
                                     subtitle:
                                         'Experience Make-overs in a whole new level',
                                   ),
-                                  Recommendation(
-                                    image: AppImages.recommended,
-                                    title: 'Make-Over',
-                                    subtitle:
-                                        'Experience Make-overs in a whole new level',
-                                  ),
                                 ],
                               ),
                             ),
@@ -193,6 +202,13 @@ class HomeView extends GetView<HomeController> {
           ],
         ),
       ),
+      bottomNavigationBar: BottomNavigationBarWidget(
+        onItemTapped: (index) {
+          currentIndex.value = index;
+          handleNavigation(index);
+        },
+        currentIndex: currentIndex.value,
+      ),
     );
   }
-} 
+}

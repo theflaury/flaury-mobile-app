@@ -11,7 +11,14 @@ import 'package:get/get.dart';
 import '../controllers/signup_controller.dart';
 
 class SignupView extends GetView<SignupController> {
-  const SignupView({Key? key}) : super(key: key);
+   SignupView({Key? key}) : super(key: key);
+  final emailController = TextEditingController();
+  final passwordController = TextEditingController();
+  final nameController = TextEditingController();
+  final mobileController = TextEditingController();
+  void signup() {
+    
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(

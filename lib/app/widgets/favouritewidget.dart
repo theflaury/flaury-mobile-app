@@ -23,7 +23,7 @@ class FavouriteWidget extends StatelessWidget {
       onTap: () {
         // Handle tap gesture here (e.g., navigate to another page)
         if (kDebugMode) {
-          print('Notification container tapped!');
+          print('Favourite container tapped!');
         }
       },
       //  main container

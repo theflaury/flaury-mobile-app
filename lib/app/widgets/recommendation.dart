@@ -41,7 +41,7 @@ class Recommendation extends StatelessWidget {
           vSpace(5),
           SizedBox(
             width: 156.0,
-            height: 170.0,
+            height: 100.0,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -60,7 +60,5 @@ class Recommendation extends StatelessWidget {
         ],
       ),
     );
-    
   }
-  
 }

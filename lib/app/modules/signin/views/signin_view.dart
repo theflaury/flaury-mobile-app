@@ -11,7 +11,12 @@ import 'package:get/get.dart';
 import '../controllers/signin_controller.dart';
 
 class SigninView extends GetView<SigninController> {
-  const SigninView({Key? key}) : super(key: key);
+   SigninView({Key? key}) : super(key: key);
+  final emailController = TextEditingController();
+  final passwordController = TextEditingController();
+  void login() {
+    
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(

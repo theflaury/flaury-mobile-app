@@ -6,4 +6,5 @@ class AppImages {
   static const String nearbysalon = 'assets/images/Rectangle 64.png';
   static const String favourites = 'assets/images/Rectangle 81.png';
   static const String recommended = 'assets/images/Frame 60.png';
+  static const String chat = 'assets/images/Ellipse 31.png';
 }
