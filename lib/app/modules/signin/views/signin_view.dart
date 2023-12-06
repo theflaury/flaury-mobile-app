@@ -11,12 +11,9 @@ import 'package:get/get.dart';
 import '../controllers/signin_controller.dart';
 
 class SigninView extends GetView<SigninController> {
-   SigninView({Key? key}) : super(key: key);
+  SigninView({Key? key}) : super(key: key);
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
-  void login() {
-    
-  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -127,13 +124,13 @@ class SigninView extends GetView<SigninController> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          SmallAppText(
+                          MedAppText(
                             'Don’t have an account?',
                           ),
                           hSpace(5),
                           GestureDetector(
                             onTap: () => Get.toNamed(Routes.SIGNUP),
-                            child: SmallAppText(
+                            child: MedAppText(
                               'Sign Up',
                               fontWeight: FontWeight.bold,
                               color: AppColors.primary,

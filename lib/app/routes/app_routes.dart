@@ -22,7 +22,7 @@ abstract class Routes {
 abstract class _Paths {
   _Paths._();
   static const SIGNIN = '/signin';
-  static const SPLASHSCREEN = '/splashscreen';
+  static const SPLASHSCREEN = '/';
   static const ONBOARDING = '/onboarding';
   static const SIGNUP = '/signup';
   static const FORGOT_PASSWORD = '/forgot-password';

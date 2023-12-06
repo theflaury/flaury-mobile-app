@@ -14,16 +14,16 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-        designSize: const Size(375, 812),
-        minTextAdapt: true,
+        designSize: const Size(390, 844),
+        
         splitScreenMode: true,
         builder: (context, _) {
           return GetMaterialApp(
             getPages: AppPages.routes,
             debugShowCheckedModeBanner: false,
             initialBinding: SplashscreenBinding(),
-            initialRoute: Routes.SPLASHSCREEN,
-          );
+              initialRoute: '/',
+            );
         });
   }
 }

@@ -16,9 +16,7 @@ class SignupView extends GetView<SignupController> {
   final passwordController = TextEditingController();
   final nameController = TextEditingController();
   final mobileController = TextEditingController();
-  void signup() {
-    
-  }
+ 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
