@@ -52,7 +52,6 @@ class BottomNavigationBarWidget extends StatelessWidget {
       elevation: 1,
       selectedIconTheme: const IconThemeData(
         color: AppColors.primary,
-        size: 35,
       ),
       onTap: onItemTapped,
       selectedItemColor: AppColors.primary,
