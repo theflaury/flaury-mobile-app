@@ -1,23 +1,22 @@
 dart pub global activate get_cli
 dart pub add get_cli
+
 import 'package:get_cli/get_cli.dart';
 
 flutter pub add get
 import 'package:get/get.dart';
 
-// To install:
-pub global activate get_cli 
-// to use this add the following to system PATH: [FlutterSDKInstallDir]\bin\cache\dart-sdk\bin
-
-flutter pub global activate get_cli
+export PATH="$PATH":"$HOME/.pub-cache/bin"
 
 // To create a flutter project in the current directory:
 // Note: By default it will take the folder's name as project name
 // You can name the project with `get create project:my_project`
 // If the name has spaces use `get create project:"my cool project"`
+
 get create project
 
 // To generate the chosen structure on an existing project:
+
 get init
 
 // To create a page:
@@ -30,25 +29,30 @@ get create page:home
 // (Screens have controller, view, and binding)
 // Note: you can use any name, ex: `get screen page:login`
 // Nota: use this option if the chosen structure was CLEAN (by Arktekko)
+
 get create screen:home 
 
 // To create a new controller in a specific folder:
 // Note: you don't need to reference the folder,
 // Getx will search automatically for the home folder
 // and add your controller there.
+
 get create controller:dialogcontroller on home
 
 // To create a new view in a specific folder:
 // Note: you don't need to reference the folder,
 // Getx will automatically search for the home folder
 // and insert your view there.
+
 get create view:dialogview on home
 
 // To create a new provider in a specific folder:
+
 get create provider:user on home
 
 // To generate a localization file:
 // Note: 'assets/locales' directory with your translation files in json format
+
 get generate locales assets/locales
 
 // To generate a class model:
