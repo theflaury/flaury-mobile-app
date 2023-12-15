@@ -6,7 +6,7 @@ import 'package:get/get.dart';
 import '../controllers/bookings_controller.dart';
 
 class BookingsView extends GetView<BookingsController> {
-   BookingsView({Key? key}) : super(key: key);
+   BookingsView({super.key});
     final RxInt currentIndex = 1.obs;
 
   @override

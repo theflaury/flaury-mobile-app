@@ -22,10 +22,6 @@ class SigninController extends GetxController {
     passwordController = TextEditingController();
   }
 
-  @override
-  void onReady() {
-    super.onReady();
-  }
 
   @override
   void onClose() {

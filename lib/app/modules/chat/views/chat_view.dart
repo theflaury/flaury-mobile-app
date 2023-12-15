@@ -3,7 +3,6 @@ import 'package:flaury/app/theme/colors.dart';
 import 'package:flaury/app/widgets/apptext.dart';
 import 'package:flaury/app/widgets/chatwidget.dart';
 import 'package:flaury/app/widgets/navbar.dart';
-import 'package:flaury/app/widgets/space.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -12,7 +11,7 @@ import 'package:get/get.dart';
 import '../controllers/chat_controller.dart';
 
 class ChatView extends GetView<ChatController> {
-  ChatView({Key? key}) : super(key: key);
+  ChatView({super.key});
   final RxInt currentIndex = 2.obs;
 
   @override

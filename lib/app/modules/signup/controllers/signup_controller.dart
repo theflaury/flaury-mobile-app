@@ -28,10 +28,6 @@ class SignupController extends GetxController {
     mobileController = TextEditingController();
   }
 
-  @override
-  void onReady() {
-    super.onReady();
-  }
 
   @override
   void onClose() {

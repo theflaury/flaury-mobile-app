@@ -11,7 +11,7 @@ import 'package:get/get.dart';
 import '../controllers/signin_controller.dart';
 
 class SigninView extends GetView<SigninController> {
-  SigninView({Key? key}) : super(key: key);
+  SigninView({super.key});
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
   @override
@@ -126,6 +126,7 @@ class SigninView extends GetView<SigninController> {
                         children: [
                           MedAppText(
                             'Don’t have an account?',
+                            fontSize: 20,
                           ),
                           hSpace(5),
                           GestureDetector(
@@ -134,6 +135,7 @@ class SigninView extends GetView<SigninController> {
                               'Sign Up',
                               fontWeight: FontWeight.bold,
                               color: AppColors.primary,
+                              fontSize: 18,
                             ),
                           )
                         ],

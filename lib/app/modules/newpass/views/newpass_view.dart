@@ -12,7 +12,7 @@ import 'package:iconsax_flutter/iconsax_flutter.dart';
 import '../controllers/newpass_controller.dart';
 
 class NewpassView extends GetView<NewpassController> {
-  const NewpassView({Key? key}) : super(key: key);
+  const NewpassView({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(

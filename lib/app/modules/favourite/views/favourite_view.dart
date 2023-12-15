@@ -11,7 +11,7 @@ import 'package:get/get.dart';
 import '../controllers/favourite_controller.dart';
 
 class FavouriteView extends GetView<FavouriteController> {
-  const FavouriteView({Key? key}) : super(key: key);
+  const FavouriteView({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(

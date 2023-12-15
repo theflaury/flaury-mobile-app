@@ -7,7 +7,7 @@ import '../../../theme/colors.dart';
 import '../controllers/profile_controller.dart';
 
 class ProfileView extends GetView<ProfileController> {
-  ProfileView({Key? key}) : super(key: key);
+  ProfileView({super.key});
   final RxInt currentIndex = 3.obs;
   @override
   Widget build(BuildContext context) {

@@ -8,7 +8,7 @@ import 'package:get/get.dart';
 import '../controllers/phoneauth_controller.dart';
 
 class PhoneauthView extends GetView<PhoneauthController> {
-  const PhoneauthView({Key? key}) : super(key: key);
+  const PhoneauthView({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -3,7 +3,6 @@ import 'package:flaury/app/theme/colors.dart';
 import 'package:flaury/app/widgets/apptext.dart';
 import 'package:flaury/app/widgets/notificationwidget.dart';
 import 'package:flaury/app/widgets/space.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -11,7 +10,7 @@ import 'package:get/get.dart';
 import '../controllers/notifications_controller.dart';
 
 class NotificationsView extends GetView<NotificationsController> {
-  const NotificationsView({Key? key}) : super(key: key);
+  const NotificationsView({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -10,7 +10,7 @@ import 'package:get/get.dart';
 import '../controllers/emailauth_controller.dart';
 
 class EmailauthView extends GetView<EmailauthController> {
-  const EmailauthView({Key? key}) : super(key: key);
+  const EmailauthView({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(

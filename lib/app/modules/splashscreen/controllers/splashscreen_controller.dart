@@ -5,10 +5,6 @@ class SplashscreenController extends GetxController {
   //TODO: Implement SplashscreenController
 
   final count = 0.obs;
-  @override
-  void onInit() {
-    super.onInit();
-  }
 
   @override
   Future<void> onReady() async {
@@ -19,10 +15,6 @@ class SplashscreenController extends GetxController {
     super.onReady();
   }
 
-  @override
-  void onClose() {
-    super.onClose();
-  }
 
   void increment() => count.value++;
 }

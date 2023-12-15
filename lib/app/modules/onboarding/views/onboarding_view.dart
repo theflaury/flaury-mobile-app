@@ -6,7 +6,7 @@ import '../controllers/onboarding_controller.dart';
 
 // ignore: must_be_immutable
 class OnboardingView extends GetView<OnboardingController> {
-  OnboardingView({Key? key}) : super(key: key);
+  OnboardingView({super.key});
   PageController pageController = PageController(
     initialPage: 0,
   );

@@ -13,7 +13,7 @@ import '../controllers/home_controller.dart';
 import 'package:flaury/app/widgets/navbar.dart';
 
 class HomeView extends GetView<HomeController> {
-  HomeView({Key? key}) : super(key: key);
+  HomeView({super.key});
   final RxInt currentIndex = 0.obs; // Use GetX RxInt for reactivity
 
   @override
