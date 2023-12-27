@@ -5,9 +5,7 @@ import 'package:flaury/app/widgets/apptext.dart';
 import 'package:flaury/app/widgets/space.dart';
 import 'package:flaury/app/widgets/textfields.dart';
 import 'package:flutter/material.dart';
-
 import 'package:get/get.dart';
-
 import '../controllers/signup_controller.dart';
 
 class SignupView extends GetView<SignupController> {
