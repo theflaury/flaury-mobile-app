@@ -35,13 +35,22 @@ class NotficationWidget extends StatelessWidget {
               horizontal: 15,
             ),
             width: double.infinity,
-            height: 80.h,
+            height: 100.h,
             decoration: BoxDecoration(
-              color: Colors.transparent,
+              boxShadow: const [
+                BoxShadow(
+                  color: AppColors.greytext,
+                  offset: Offset(
+                    0.4,
+                    0.5,
+                  ),
+                  blurRadius: 4.5,
+                ),
+              ],
+              color: Colors.white,
               borderRadius: BorderRadius.circular(20),
               border: Border.all(
-                color: AppColors.grey,
-                style: BorderStyle.solid,
+                color: AppColors.white,
               ),
             ),
             // Inner container with the icon

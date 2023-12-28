@@ -16,13 +16,13 @@ class HomeHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: simPad(40, 20),
-      height: 220.0,
-      decoration: const BoxDecoration(
+      height: 230.h,
+      decoration: BoxDecoration(
         color: AppColors.primary,
         borderRadius: BorderRadius.vertical(
           bottom: Radius.elliptical(
-            50.0,
-            25.0,
+            50.r,
+            25.r,
           ),
         ),
       ),

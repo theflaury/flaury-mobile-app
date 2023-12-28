@@ -7,4 +7,5 @@ class AppImages {
   static const String favourites = 'assets/images/Rectangle 81.png';
   static const String recommended = 'assets/images/Frame 60.png';
   static const String chat = 'assets/images/Ellipse 31.png';
+  static const String line = 'assets/images/Line.png';
 }

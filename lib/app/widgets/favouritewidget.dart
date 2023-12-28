@@ -37,7 +37,7 @@ class FavouriteWidget extends StatelessWidget {
             decoration: BoxDecoration(
               boxShadow: const [
                 BoxShadow(
-                  color: AppColors.black,
+                  color: AppColors.greytext,
                   offset: Offset(
                     0.4,
                     0.5,
@@ -49,6 +49,7 @@ class FavouriteWidget extends StatelessWidget {
               borderRadius: BorderRadius.circular(20),
               border: Border.all(
                 width: 0.5,
+                color: AppColors.white,
               ),
             ),
             // Inner container with the icon
@@ -56,6 +57,7 @@ class FavouriteWidget extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
+                // Image
                 Container(
                   width: 80.w,
                   height: 80.h,
@@ -111,7 +113,8 @@ class FavouriteWidget extends StatelessWidget {
                     )
                   ],
                 ),
-                hSpace(10),
+                const Spacer(),
+                // delete icon
                 Row(
                   children: [
                     GestureDetector(
