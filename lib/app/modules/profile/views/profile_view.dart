@@ -124,10 +124,10 @@ class ProfileView extends GetView<ProfileController> {
                               subtitle:
                                   'Get promo codes and enjoy discount on your bookings.',
                             ),
-                            vSpace(15),
+                            vSpace(10),
                             const ProfileWidget(
-                              iconData: Iconsax.setting_2_copy,
-                              title: 'Settings',
+                              iconData: Icons.article_rounded,
+                              title: 'Blog',
                             ),
                           ],
                         ),
