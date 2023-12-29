@@ -17,6 +17,9 @@ abstract class Routes {
   static const BOTTOMNAVIGATION = _Paths.BOTTOMNAVIGATION;
   static const NOTIFICATIONS = _Paths.NOTIFICATIONS;
   static const FAVOURITE = _Paths.FAVOURITE;
+  static const HELP = _Paths.HELP;
+  static const PAYMENT = _Paths.PAYMENT;
+  static const ABOUT = _Paths.ABOUT;
 }
 
 abstract class _Paths {
@@ -35,4 +38,7 @@ abstract class _Paths {
   static const BOTTOMNAVIGATION = '/bottomnavigation';
   static const NOTIFICATIONS = '/notifications';
   static const FAVOURITE = '/favourite';
+  static const HELP = '/help';
+  static const PAYMENT = '/payment';
+  static const ABOUT = '/about';
 }

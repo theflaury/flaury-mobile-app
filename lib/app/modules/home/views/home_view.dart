@@ -18,9 +18,9 @@ class HomeView extends GetView<HomeController> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(
-        child: Column(
+    return SafeArea(
+      child: Scaffold(
+        body: Column(
           children: [
             // Header
             const HomeHeader(),
@@ -201,13 +201,13 @@ class HomeView extends GetView<HomeController> {
             ),
           ],
         ),
-      ),
-      bottomNavigationBar: BottomNavigationBarWidget(
-        onItemTapped: (index) {
-          currentIndex.value = index;
-          handleNavigation(index);
-        },
-        currentIndex: currentIndex.value,
+        bottomNavigationBar: BottomNavigationBarWidget(
+          onItemTapped: (index) {
+            currentIndex.value = index;
+            handleNavigation(index);
+          },
+          currentIndex: currentIndex.value,
+        ),
       ),
     );
   }

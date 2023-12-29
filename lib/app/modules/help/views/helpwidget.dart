@@ -1,17 +1,17 @@
 import 'package:flaury/app/widgets/apptext.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../theme/colors.dart';
-import 'space.dart';
 
-class ProfileWidget extends StatelessWidget {
-  const ProfileWidget({
+import '../../../theme/colors.dart';
+import '../../../widgets/space.dart';
+
+class HelpWidget extends StatelessWidget {
+  const HelpWidget({
     super.key,
-    required this.iconData,
-    required this.title, required this.onTap,
+    required this.title,
+    required this.onTap,
   });
 
-  final IconData iconData;
   final String title;
  final VoidCallback onTap;
   @override
@@ -30,11 +30,6 @@ class ProfileWidget extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Icon(
-              iconData,
-              color: AppColors.black,
-              size: 30,
-            ),
             hSpace(20),
             MedAppText(
               title,
@@ -42,8 +37,8 @@ class ProfileWidget extends StatelessWidget {
               color: AppColors.black,
             ),
             const Spacer(),
-            Icon(
-              Icons.navigate_next,
+            const Icon(
+              Icons.keyboard_arrow_down_rounded,
               color: AppColors.black,
               size: 40,
             )

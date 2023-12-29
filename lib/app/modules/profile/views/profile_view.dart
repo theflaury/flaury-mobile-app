@@ -1,3 +1,5 @@
+import 'package:flaury/app/routes/app_pages.dart';
+import 'package:flaury/app/widgets/logout.dart';
 import 'package:flaury/app/widgets/navbar.dart';
 import 'package:flaury/app/widgets/otherset.dart';
 import 'package:flaury/app/widgets/space.dart';
@@ -36,6 +38,9 @@ class ProfileView extends GetView<ProfileController> {
                           crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
                             GestureDetector(
+                              onTap: () {
+                                Get.toNamed(Routes.HELP);
+                              },
                               child: Container(
                                 width: 100.w,
                                 height: 40.h,
@@ -100,17 +105,22 @@ class ProfileView extends GetView<ProfileController> {
                         // Other Setting Features
                         Column(
                           children: [
-                            const ProfileWidget(
+                            ProfileWidget(
+                              onTap: () {},
                               iconData: Iconsax.setting_2_copy,
                               title: 'Settings',
                             ),
-                            vSpace(10),
-                            const ProfileWidget(
+                            vSpace(15),
+                            ProfileWidget(
+                              onTap: () {
+                                Get.toNamed(Routes.PAYMENT);
+                              },
                               iconData: Iconsax.card_copy,
                               title: 'Payments',
                             ),
                             vSpace(15),
-                            const OtherSettings(
+                            OtherSettings(
+                              onTap: () {},
                               iconData: Iconsax.info_circle_copy,
                               title: 'About',
                               subtitle:
@@ -118,16 +128,24 @@ class ProfileView extends GetView<ProfileController> {
                             ),
                             vSpace(15),
                             OtherSettings(
+                              onTap: () {},
                               height: 90.h,
                               iconData: Iconsax.gift_copy,
                               title: 'Promotions',
                               subtitle:
                                   'Get promo codes and enjoy discount on your bookings.',
                             ),
-                            vSpace(10),
-                            const ProfileWidget(
+                            vSpace(15),
+                            ProfileWidget(
+                              onTap: () {},
                               iconData: Icons.article_rounded,
                               title: 'Blog',
+                            ),
+                            vSpace(15),
+                            LogOut(
+                              onTap: () {},
+                              iconData: Iconsax.logout_copy,
+                              title: 'Log Out',
                             ),
                           ],
                         ),

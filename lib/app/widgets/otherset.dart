@@ -1,27 +1,26 @@
-import 'package:flaury/app/constants/images.dart';
 import 'package:flaury/app/widgets/apptext.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:iconsax_flutter/iconsax_flutter.dart';
 import '../theme/colors.dart';
 import 'space.dart';
 
 class OtherSettings extends StatelessWidget {
-  const OtherSettings(
-      {super.key,
-      required this.iconData,
-      required this.title,
-      required this.subtitle,
-      this.height});
+  const OtherSettings({
+    super.key,
+    required this.iconData,
+    required this.title, required this.subtitle, this.height, required this.onTap,
+  });
 
   final IconData iconData;
   final String title;
   final String subtitle;
   final double? height;
+  final VoidCallback onTap;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
+      onTap: onTap,
       child: Container(
         height: height?.h ?? 65.h,
         width: double.infinity,

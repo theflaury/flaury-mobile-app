@@ -4,8 +4,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../theme/colors.dart';
 import 'space.dart';
 
-class ProfileWidget extends StatelessWidget {
-  const ProfileWidget({
+class LogOut extends StatelessWidget {
+  const LogOut({
     super.key,
     required this.iconData,
     required this.title, required this.onTap,
@@ -13,11 +13,12 @@ class ProfileWidget extends StatelessWidget {
 
   final IconData iconData;
   final String title;
- final VoidCallback onTap;
+  final Function onTap;
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: onTap,
+      onTap: onTap(),
       child: Container(
         height: 50.h,
         width: double.infinity,
@@ -32,21 +33,15 @@ class ProfileWidget extends StatelessWidget {
           children: [
             Icon(
               iconData,
-              color: AppColors.black,
+              color: AppColors.red,
               size: 30,
             ),
             hSpace(20),
             MedAppText(
               title,
               fontWeight: FontWeight.bold,
-              color: AppColors.black,
+              color: AppColors.red,
             ),
-            const Spacer(),
-            Icon(
-              Icons.navigate_next,
-              color: AppColors.black,
-              size: 40,
-            )
           ],
         ),
       ),
